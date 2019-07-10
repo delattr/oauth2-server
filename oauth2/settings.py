@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'oauth2_provider',
+    'corsheaders',
     'rest_framework',
 ]
 
@@ -48,7 +49,11 @@ REST_FRAMEWORK = {
 
 OAUTH2_PROVIDER = {
     # this is the list of available scopes
-    'SCOPES': {'read': 'Read scope',}
+    'SCOPES': {
+        'read': 'Read scope',
+        'write': 'Write scope',
+        'groups': 'Access to your groups'
+    }
 }
 
 MIDDLEWARE = [
@@ -142,6 +147,7 @@ AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Configure Django App for Heroku.
 import django_heroku
