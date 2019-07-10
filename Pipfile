@@ -10,6 +10,7 @@ django = "*"
 djangorestframework = "*"
 django-oauth-toolkit = "*"
 django-cors-middleware = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
