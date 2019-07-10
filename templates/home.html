@@ -1,0 +1,26 @@
+{% extends "oauth2_provider/base.html" %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+     <h2>Hi, {{ user.email }}!</h2>
+     <h3>
+      <a href="{% url 'logout' %}">logout</a>
+    </h3>
+     <p>
+      <ul>
+        <li>
+          <a href="{% url 'oauth2_provider:list' %}" target="_blank">Application List</a>
+        </li>
+        <li>
+          <a href="{% url 'oauth2_provider:register' %}" target="_blank">Register new application</a>
+        </li>
+      </ul>
+     </p>
+    {% else %}
+      <h1>OAuth2 Authorization Server</h1>
+      <h2>
+        <a href="{% url 'login' %}">login</a> or
+        <a href="{% url 'signup' %}">sign up</a>
+      <h2>
+    {% endif %}
+{% endblock content %}
