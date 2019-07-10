@@ -9,7 +9,7 @@ CustomUser = get_user_model()
 class CreateUser(generics.CreateAPIView):
     """Create User endpoint"""
 
-    permission_classes = (permissions.AllowAny,)
+    permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
     queryset = CustomUser.objects.all()
     serializer_class = CreateUserSerializer
 
