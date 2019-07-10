@@ -2,9 +2,16 @@ from django.shortcuts import render
 from rest_framework import generics, permissions
 from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope
 from django.contrib.auth import get_user_model
-from .serializers import UserSerializer, UserDetailSerializer
+from .serializers import UserSerializer, UserDetailSerializer, CreateUserSerializer
 
 CustomUser = get_user_model()
+
+class CreateUser(generics.CreateAPIView):
+    """Create User endpoint"""
+
+    permission_classes = (permissions.AllowAny,)
+    queryset = CustomUser.objects.all()
+    serializer_class = CreateUserSerializer
 
 class UserList(generics.ListCreateAPIView):
     """ List all users"""
@@ -20,3 +27,4 @@ class UserDetails(generics.RetrieveAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserDetailSerializer
     lookup_field = 'email'
+
