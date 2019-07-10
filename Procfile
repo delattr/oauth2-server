@@ -1,1 +1,1 @@
-web: gunicorn oauth2:app
+web: gunicorn oauth2.wsgi --log-file -
