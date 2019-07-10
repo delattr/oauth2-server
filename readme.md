@@ -2,24 +2,24 @@
 
 A simple API which creates a user by using email and password only.
 
-## API endpoint
+### Client
 
-- POST **/api/v1/create** - Create User
+- POST **/api/v1/create/** - Create User
 
   Required fields: *email, password*
 
 
 
-## Authorization server
+### Authorization
 
 - GET **/accounts/o/token/** - Access token URL
 
   Login and create a new application to get **client ID** and **client secret**.
 
-## Resource server
+### Resource
 Requires token authoriztion
-- GET **/api/v1/users** - Returns list all users
-- GET **/api/vi/users/*user-email-addresse*** - Returns user detail
+- GET **/api/v1/user/** - Returns list all users
+- GET **/api/vi/user/*user-email-addresse***/ - Returns user detail
 
 ## Deployement
 https://polar-beyond-91477.herokuapp.com/
