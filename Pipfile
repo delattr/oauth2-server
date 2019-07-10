@@ -12,6 +12,9 @@ django-oauth-toolkit = "*"
 django-cors-middleware = "*"
 gunicorn = "*"
 django-heroku = "*"
+dj-database-url = "*"
+psycopg2 = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.7"
