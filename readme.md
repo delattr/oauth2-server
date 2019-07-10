@@ -9,13 +9,13 @@ Login first and create a new application to get **client ID** and **client secre
 
 A callback  is required for **Authorization Grant Type** : *authorization-code*
 
-(e.g: https://getpostman.com/oauth2/callback/)
+(e.g: https://<span></span>getpostman.com/oauth2/callback/)
 
 #### URLs
 
-Access token URL: http://host.com/o/token/
+Access token URL: http://<span></span>host.com/o/token/
 
-Authorization URL: http://host.com/o/authorize/
+Authorization URL: http://<span></span>host.com/o/authorize/
 
 
 ## Resource
