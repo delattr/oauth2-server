@@ -1,6 +1,6 @@
 # OAuth2 Authorization server
 
-A simple API which creates a user by using email and password only.
+A simple API which creates a user by using email and password.
 
 
 ## Authorization
