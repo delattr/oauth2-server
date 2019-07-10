@@ -7,7 +7,7 @@ A simple API which creates a user by using email and password only.
 
 Login first and create a new application to get **client ID** and **client secret**.
 
-A callback  is required for **Authorization Grant Type** : *authorization-code*
+A callback urls  is required for **Authorization Grant Type** : *authorization-code*
 
 (e.g: https://<span></span>getpostman.com/oauth2/callback/)
 
