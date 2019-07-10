@@ -13,18 +13,18 @@ A callback  is required for **Authorization Grant Type** : *authorization-code*
 
 #### URLs
 
-Access token URL: http://<span></span>host.com/o/token/
+Access token URL: http://<span></span>host-name/o/token/
 
-Authorization URL: http://<span></span>host.com/o/authorize/
+Authorization URL: http://<span></span>host-name/o/authorize/
 
 
 ## Resource
 Requires token authoriztion
 
 API endpoints:
-- GET **/api/v1/user/** - Returns list all users.
-- GET **/api/vi/user/*user-email-addresse***/ - Returns user details.
-- POST **/api/v1/create/** - Create User. *email* and *password* fields are required.
+- GET **http://<span></span>host-name/api/v1/user/** - Returns list all users.
+- GET **http://<span></span>host-name/api/vi/user/*user-email-addresse***/ - Returns user details.
+- POST **http://<span></span>host-name/api/v1/create/** - Create User. *email* and *password* fields are required.
 
 ## Deployement
 https://polar-beyond-91477.herokuapp.com/
